@@ -1,5 +1,5 @@
 
-def ceasar(input_file, output_file, what, n=3):
+def caesar(input_file, output_file, what, n=3):
     if(what=='e'): #szyfrowanie
 
         fread=open(input_file,'r')
@@ -42,4 +42,4 @@ def ceasar(input_file, output_file, what, n=3):
         fread.close()
         fwrite.close()
 
-ceasar('/home/students/mat/j/jb417512/python/cos.txt', '/home/students/mat/j/jb417512/python/proba1.txt', 'd')
+
