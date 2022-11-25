@@ -1,4 +1,7 @@
 import argparse
+from caesar import caesar
+from morse import morse
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument("input_file", help="File to be read")
@@ -13,14 +16,13 @@ parser.add_argument("-n", type=int, default=3, help="Shift in Caesar cipher (If 
 
 args = parser.parse_args()
 
-def caesar_code(input_file, output_file, d, method, shift):
-    print ("caesar", input_file, output_file,d, method, shift)
-
-def morse_code(input_file, output_file,d, method, shift):
-    print (input_file, output_file, d, method, shift)
+if args.e:
+    what="e"
+else:
+    what="d"
 
 if args.c:
-    caesar_code(args.input_file, args.result_file, args.d, args.m, args.n)
+    caesar(args.input_file, args.result_file, what, args.n)
 
 if args.m:
-    morse_code(args.input_file, args.result_file, args.e, args.m, args.n)
+    morse(args.input_file, args.result_file, what)
